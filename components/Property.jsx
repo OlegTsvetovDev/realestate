@@ -30,15 +30,16 @@ const Property = ({
       justifyContent={"center"}
       cursor={"pointer"}
     >
-      <Box>
-        <Image
-          src={coverPhoto ? coverPhoto.url : DefaultImage}
-          width={400}
-          height={220}
-          alt={`${title}-photo`}
-          style={{ objectFit: "cover" }}
-        />
-      </Box>
+      {/* <Box> */}
+      <Image
+        src={coverPhoto ? coverPhoto.url : DefaultImage}
+        width={400}
+        height={220}
+        // fill
+        alt={`${title}-photo`}
+        style={{ objectFit: "cover", maxHeight: "220px" }}
+      />
+      {/* </Box> */}
       <Box w="full" p={"0 15px"}>
         <Flex pt={2} alignItems={"center"} justifyContent={"space-between"}>
           <Flex alignItems={"center"}>

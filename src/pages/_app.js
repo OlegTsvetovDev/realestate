@@ -4,6 +4,7 @@ import NProgress from "nprogress";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import Layout from "../../components/Layout";
+import Footer from "../../components/Footer";
 
 export default function App({ Component, pageProps }) {
   return (
