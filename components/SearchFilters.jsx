@@ -12,11 +12,11 @@ const SearchFilters = () => {
     console.log(filters);
 
     filters.forEach((filter) => {
-      query[filter.name] = filter.value;
+      if (filter.value && filterValues?.[filter.name]) {
+        query[filter.name] = filter.value;
+      }
     });
 
-    // todo: fast switching filters pass only 1 filter value to the query
-    // need to gather all of them in 1 query and then make fetch
     router.push({ pathname: path, query });
   };
 
