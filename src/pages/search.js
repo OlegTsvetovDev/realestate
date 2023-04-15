@@ -76,7 +76,11 @@ export async function getServerSideProps({ query }) {
     const areaMax = query.areaMax || "35000";
     const locationExternalIDs = query.locationExternalIDs || "5002";
     const categoryExternalIDs = query.categoryExternalIDs || "4";
-    const url = `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalIDs=${categoryExternalIDs}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${priceMin}&priceMax=${priceMax}&roomsMin=${roomsMin}&areaMax=${areaMax}&sort=${sort}`;
+    const url =
+      `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}` +
+      `&purpose=${purpose}&categoryExternalIDs=${categoryExternalIDs}&bathsMin=${bathsMin}` +
+      `&rentFrequency=${rentFrequency}&priceMin=${priceMin}&priceMax=${priceMax}` +
+      `&roomsMin=${roomsMin}&areaMax=${areaMax}&sort=${sort}`;
 
     data = await fetchApi(url);
   } catch (error) {

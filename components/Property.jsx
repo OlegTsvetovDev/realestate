@@ -59,13 +59,21 @@ const Property = ({
           alignItems={"center"}
           p={1}
           justifyContent={"space-between"}
-          w={250}
+          w={275}
           color={"blue.500"}
         >
-          {rooms}
+          <Text marginRight={2}>{rooms}</Text>
           <FaBed />
-          &nbsp;&nbsp;| {baths}
-          <FaBath /> | {millify(area)}sqft <BsGridFill />
+          <Text marginRight={5} marginLeft={5}>
+            |
+          </Text>
+          <Text marginRight={2}>{baths}</Text>
+          <FaBath />
+          <Text marginRight={5} marginLeft={5}>
+            |
+          </Text>
+          <Text marginRight={2}>{millify(area)} sqft</Text>
+          <BsGridFill />
         </Flex>
         <Text fontSize={"lg"}>
           {title.length > 30 ? `${title.substring(0, 30)} ...` : title}
